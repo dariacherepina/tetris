@@ -179,7 +179,6 @@ const colors = [
 ]
 
 const arena = createMatrix(12, 20);
-console.log(arena); console.table(arena);
 
 const player = {
     pos: { x: 0, y: 0 },
@@ -234,18 +233,15 @@ function createPiece(type) {
 }
 
 document.addEventListener('keydown', event => {
-    console.log(event.keyCode);
     if (event.keyCode === 37) {
         playerMove(-1);
     } else if (event.keyCode === 39) {
         playerMove(+1);
     } else if (event.keyCode === 40) {
         playerDrop();
-    } else if (event.keyCode === 81) {
-        playerRotate(-1);
-    } else if (event.keyCode === 87) {
+    } else if (event.keyCode === 38) {
         playerRotate(1);
-    }
+    } 
 });
 
 playerReset();

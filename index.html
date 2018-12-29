@@ -13,16 +13,45 @@
             font-size: 2em;
             text-align: center;
         }
-
+        .score {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
         canvas {
             border: 1px solid #fff;
-            height: 90vh;
+            height: 85vh;
         }
+
+        .controls  {
+            position: absolute;
+            right: 20%;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: justify;
+        }
+
+        .controls p {
+            text-align: justify;
+        }
+
+        .arrow {
+            font-size: 1.5em;
+        }
+
     </style>
 </head>
 <body>
-    <div>score: <span id="score"></span></div>
-    <canvas id="tetris" width="240px" height="400"></canvas>
+    <audio src="http://66.90.93.122/ost/tetris-attack/jspxjjqc/Tetris%20Attack%20-%20Flame%20World.mp3" autoplay="autoplay">
+        Ваш браузер не поддерживает теги audio. Необходимо обновить браузер!
+    </audio>
+    <div class="score">score: <span id="score"></span></div>
+        <canvas id="tetris" width="240px" height="400"></canvas>
+        <div class="controls">
+            <p><span class="arrow">↑</span> rotate</p>
+            <p><span class="arrow">↓</span> fast down</p>
+            <p><span class="arrow">→</span> move right</p>
+            <p><span class="arrow">←</span> move left</p>
+        </div>
     <script src="tetris.js"></script>
 </body>
 </html>
