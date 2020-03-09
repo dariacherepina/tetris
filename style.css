@@ -29,3 +29,46 @@ canvas {
 .arrow {
     font-size: 1.5em;
 }
+@media screen and ( max-width:1024px){
+    body{
+        font-size: 4em;
+    }
+    .controls{
+        top:100%;
+        transform: translateY(0);
+    }
+    p span{
+        color: black;
+    }
+    .arrow{
+        background-color: aqua;
+        border-radius: 6em;
+        padding: 0 33px 10px ;
+        cursor: pointer;
+    }
+    .left,
+    .right{
+        padding: 0 10px 10px ;
+    }
+
+}
+
+@media screen and ( max-width:414px){
+    body{
+        font-size: 2.5em;
+    }
+    .up,
+    .down{
+        padding: 0 24px 10px;
+    }
+}
+
+@media screen and ( max-width:410px){
+    body{
+        font-size: 2em;
+    }
+    .up,
+    .down{
+        padding: 0 21px 10px;
+    }
+}
